@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for automa\server\auth\auth.service.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">automa/server/auth/</a> auth.service.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>34/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>33/45</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.isAuthenticated = isAuthenticated;
+exports.hasRole = hasRole;
+exports.signToken = signToken;
+exports.setTokenCookie = setTokenCookie;
+// istanbul ignore next
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? <span class="branch-0 cbranch-skip" title="branch not covered" >obj </span>: { 'default': obj }; }
+&nbsp;
+var _passport = require('passport');
+&nbsp;
+var _passport2 = _interopRequireDefault(_passport);
+&nbsp;
+var _configEnvironment = require('../config/environment');
+&nbsp;
+var _configEnvironment2 = _interopRequireDefault(_configEnvironment);
+&nbsp;
+var _jsonwebtoken = require('jsonwebtoken');
+&nbsp;
+var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
+&nbsp;
+var _expressJwt = require('express-jwt');
+&nbsp;
+var _expressJwt2 = _interopRequireDefault(_expressJwt);
+&nbsp;
+var _composableMiddleware = require('composable-middleware');
+&nbsp;
+var _composableMiddleware2 = _interopRequireDefault(_composableMiddleware);
+&nbsp;
+var _apiUserUserModel = require('../api/user/user.model');
+&nbsp;
+var _apiUserUserModel2 = _interopRequireDefault(_apiUserUserModel);
+&nbsp;
+var validateJwt = (0, _expressJwt2['default'])({
+  secret: _configEnvironment2['default'].secrets.session
+});
+&nbsp;
+/**
+ * Attaches the user object to the request if authenticated
+ * Otherwise returns 403
+ */
+&nbsp;
+function isAuthenticated() {
+  return (0, _composableMiddleware2['default'])()
+  // Validate jwt
+  .use(function (req, res, next) {
+    // allow access_token to be passed through query parameter as well
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (req.query &amp;&amp; req.query.hasOwnProperty('access_token')) {
+<span class="cstat-no" title="statement not covered" >      req.headers.authorization = 'Bearer ' + req.query.access_token;</span>
+    }
+    validateJwt(req, res, next);
+  })
+  // Attach user to request
+  .use(function (req, res, next) {
+    _apiUserUserModel2['default'].findByIdAsync(req.user._id).then(function (user) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!user) {
+<span class="cstat-no" title="statement not covered" >        return res.status(401).end();</span>
+      }
+      req.user = user;
+      next();
+    })['catch'](<span class="fstat-no" title="function not covered" >function (err) {</span>
+<span class="cstat-no" title="statement not covered" >      return next(err);</span>
+    });
+  });
+}
+&nbsp;
+/**
+ * Checks if the user role meets the minimum requirements of the route
+ */
+&nbsp;
+function hasRole(roleRequired) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!roleRequired) {
+<span class="cstat-no" title="statement not covered" >    throw new Error('Required role needs to be set');</span>
+  }
+&nbsp;
+  return (0, _composableMiddleware2['default'])().use(isAuthenticated()).use(<span class="fstat-no" title="function not covered" >function meetsRequirements(req, res, next) {</span>
+<span class="cstat-no" title="statement not covered" >    if (_configEnvironment2['default'].userRoles.indexOf(req.user.role) &gt;= _configEnvironment2['default'].userRoles.indexOf(roleRequired)) {</span>
+<span class="cstat-no" title="statement not covered" >      next();</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      res.status(403).send('Forbidden');</span>
+    }
+  });
+}
+&nbsp;
+/**
+ * Returns a jwt token signed by the app secret
+ */
+&nbsp;
+function signToken(id, role) {
+  return _jsonwebtoken2['default'].sign({ _id: id, role: role }, _configEnvironment2['default'].secrets.session, {
+    expiresIn: 60 * 60 * 5
+  });
+}
+&nbsp;
+/**
+ * Set token cookie directly for oAuth strategies
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function setTokenCookie(req, res) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!req.user) {</span>
+<span class="cstat-no" title="statement not covered" >    return res.status(404).send('It looks like you aren\'t logged in, please try again.');</span>
+  }
+<span class="cstat-no" title="statement not covered" >  var token = signToken(req.user._id, req.user.role);</span>
+<span class="cstat-no" title="statement not covered" >  res.cookie('token', token);</span>
+<span class="cstat-no" title="statement not covered" >  res.redirect('/');</span>
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6L2dpdC9hdXRvbWEvc2VydmVyL2F1dGgvYXV0aC5zZXJ2aWNlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLFlBQVksQ0FBQzs7Ozs7Ozs7Ozs7Ozt3QkFFUSxVQUFVOzs7O2lDQUNaLHVCQUF1Qjs7Ozs0QkFDMUIsY0FBYzs7OzswQkFDUCxhQUFhOzs7O29DQUNoQix1QkFBdUI7Ozs7Z0NBQzFCLHdCQUF3Qjs7OztBQUV6QyxJQUFJLFdBQVcsR0FBRyw2QkFBVztBQUMzQixRQUFNLEVBQUUsK0JBQU8sT0FBTyxDQUFDLE9BQU87Q0FDL0IsQ0FBQyxDQUFDOzs7Ozs7O0FBTUksU0FBUyxlQUFlLEdBQUc7QUFDaEMsU0FBTyx3Q0FBUzs7R0FFYixHQUFHLENBQUMsVUFBUyxHQUFHLEVBQUUsR0FBRyxFQUFFLElBQUksRUFBRTs7QUFFNUIsUUFBSSxHQUFHLENBQUMsS0FBSyxJQUFJLEdBQUcsQ0FBQyxLQUFLLENBQUMsY0FBYyxDQUFDLGNBQWMsQ0FBQyxFQUFFO0FBQ3pELFNBQUcsQ0FBQyxPQUFPLENBQUMsYUFBYSxHQUFHLFNBQVMsR0FBRyxHQUFHLENBQUMsS0FBSyxDQUFDLFlBQVksQ0FBQztLQUNoRTtBQUNELGVBQVcsQ0FBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLElBQUksQ0FBQyxDQUFDO0dBQzdCLENBQUM7O0dBRUQsR0FBRyxDQUFDLFVBQVMsR0FBRyxFQUFFLEdBQUcsRUFBRSxJQUFJLEVBQUU7QUFDNUIsa0NBQUssYUFBYSxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQzdCLElBQUksQ0FBQyxVQUFBLElBQUksRUFBSTtBQUNaLFVBQUksQ0FBQyxJQUFJLEVBQUU7QUFDVCxlQUFPLEdBQUcsQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsR0FBRyxFQUFFLENBQUM7T0FDOUI7QUFDRCxTQUFHLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztBQUNoQixVQUFJLEVBQUUsQ0FBQztLQUNSLENBQUMsU0FDSSxDQUFDLFVBQUEsR0FBRzthQUFJLElBQUksQ0FBQyxHQUFHLENBQUM7S0FBQSxDQUFDLENBQUM7R0FDNUIsQ0FBQyxDQUFDO0NBQ047Ozs7OztBQUtNLFNBQVMsT0FBTyxDQUFDLFlBQVksRUFBRTtBQUNwQyxNQUFJLENBQUMsWUFBWSxFQUFFO0FBQ2pCLFVBQU0sSUFBSSxLQUFLLENBQUMsK0JBQStCLENBQUMsQ0FBQztHQUNsRDs7QUFFRCxTQUFPLHdDQUFTLENBQ2IsR0FBRyxDQUFDLGVBQWUsRUFBRSxDQUFDLENBQ3RCLEdBQUcsQ0FBQyxTQUFTLGlCQUFpQixDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsSUFBSSxFQUFFO0FBQzlDLFFBQUksK0JBQU8sU0FBUyxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxJQUN2QywrQkFBTyxTQUFTLENBQUMsT0FBTyxDQUFDLFlBQVksQ0FBQyxFQUFFO0FBQzFDLFVBQUksRUFBRSxDQUFDO0tBQ1IsTUFBTTtBQUNMLFNBQUcsQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDO0tBQ25DO0dBQ0YsQ0FBQyxDQUFDO0NBQ047Ozs7OztBQUtNLFNBQVMsU0FBUyxDQUFDLEVBQUUsRUFBRSxJQUFJLEVBQUU7QUFDbEMsU0FBTywwQkFBSSxJQUFJLENBQUMsRUFBRSxHQUFHLEVBQUUsRUFBRSxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsRUFBRSwrQkFBTyxPQUFPLENBQUMsT0FBTyxFQUFFO0FBQy9ELGFBQVMsRUFBRSxFQUFFLEdBQUcsRUFBRSxHQUFHLENBQUM7R0FDdkIsQ0FBQyxDQUFDO0NBQ0o7Ozs7OztBQUtNLFNBQVMsY0FBYyxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUU7QUFDdkMsTUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEVBQUU7QUFDYixXQUFPLEdBQUcsQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsSUFBSSxDQUFDLHdEQUF3RCxDQUFDLENBQUM7R0FDdkY7QUFDRCxNQUFJLEtBQUssR0FBRyxTQUFTLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxHQUFHLEVBQUUsR0FBRyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztBQUNuRCxLQUFHLENBQUMsTUFBTSxDQUFDLE9BQU8sRUFBRSxLQUFLLENBQUMsQ0FBQztBQUMzQixLQUFHLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0NBQ25CIiwiZmlsZSI6IkM6L2dpdC9hdXRvbWEvc2VydmVyL2F1dGgvYXV0aC5zZXJ2aWNlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiJ3VzZSBzdHJpY3QnO1xuXG5pbXBvcnQgcGFzc3BvcnQgZnJvbSAncGFzc3BvcnQnO1xuaW1wb3J0IGNvbmZpZyBmcm9tICcuLi9jb25maWcvZW52aXJvbm1lbnQnO1xuaW1wb3J0IGp3dCBmcm9tICdqc29ud2VidG9rZW4nO1xuaW1wb3J0IGV4cHJlc3NKd3QgZnJvbSAnZXhwcmVzcy1qd3QnO1xuaW1wb3J0IGNvbXBvc2UgZnJvbSAnY29tcG9zYWJsZS1taWRkbGV3YXJlJztcbmltcG9ydCBVc2VyIGZyb20gJy4uL2FwaS91c2VyL3VzZXIubW9kZWwnO1xuXG52YXIgdmFsaWRhdGVKd3QgPSBleHByZXNzSnd0KHtcbiAgc2VjcmV0OiBjb25maWcuc2VjcmV0cy5zZXNzaW9uXG59KTtcblxuLyoqXG4gKiBBdHRhY2hlcyB0aGUgdXNlciBvYmplY3QgdG8gdGhlIHJlcXVlc3QgaWYgYXV0aGVudGljYXRlZFxuICogT3RoZXJ3aXNlIHJldHVybnMgNDAzXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBpc0F1dGhlbnRpY2F0ZWQoKSB7XG4gIHJldHVybiBjb21wb3NlKClcbiAgICAvLyBWYWxpZGF0ZSBqd3RcbiAgICAudXNlKGZ1bmN0aW9uKHJlcSwgcmVzLCBuZXh0KSB7XG4gICAgICAvLyBhbGxvdyBhY2Nlc3NfdG9rZW4gdG8gYmUgcGFzc2VkIHRocm91Z2ggcXVlcnkgcGFyYW1ldGVyIGFzIHdlbGxcbiAgICAgIGlmIChyZXEucXVlcnkgJiYgcmVxLnF1ZXJ5Lmhhc093blByb3BlcnR5KCdhY2Nlc3NfdG9rZW4nKSkge1xuICAgICAgICByZXEuaGVhZGVycy5hdXRob3JpemF0aW9uID0gJ0JlYXJlciAnICsgcmVxLnF1ZXJ5LmFjY2Vzc190b2tlbjtcbiAgICAgIH1cbiAgICAgIHZhbGlkYXRlSnd0KHJlcSwgcmVzLCBuZXh0KTtcbiAgICB9KVxuICAgIC8vIEF0dGFjaCB1c2VyIHRvIHJlcXVlc3RcbiAgICAudXNlKGZ1bmN0aW9uKHJlcSwgcmVzLCBuZXh0KSB7XG4gICAgICBVc2VyLmZpbmRCeUlkQXN5bmMocmVxLnVzZXIuX2lkKVxuICAgICAgICAudGhlbih1c2VyID0+IHtcbiAgICAgICAgICBpZiAoIXVzZXIpIHtcbiAgICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMSkuZW5kKCk7XG4gICAgICAgICAgfVxuICAgICAgICAgIHJlcS51c2VyID0gdXNlcjtcbiAgICAgICAgICBuZXh0KCk7XG4gICAgICAgIH0pXG4gICAgICAgIC5jYXRjaChlcnIgPT4gbmV4dChlcnIpKTtcbiAgICB9KTtcbn1cblxuLyoqXG4gKiBDaGVja3MgaWYgdGhlIHVzZXIgcm9sZSBtZWV0cyB0aGUgbWluaW11bSByZXF1aXJlbWVudHMgb2YgdGhlIHJvdXRlXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBoYXNSb2xlKHJvbGVSZXF1aXJlZCkge1xuICBpZiAoIXJvbGVSZXF1aXJlZCkge1xuICAgIHRocm93IG5ldyBFcnJvcignUmVxdWlyZWQgcm9sZSBuZWVkcyB0byBiZSBzZXQnKTtcbiAgfVxuXG4gIHJldHVybiBjb21wb3NlKClcbiAgICAudXNlKGlzQXV0aGVudGljYXRlZCgpKVxuICAgIC51c2UoZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMocmVxLCByZXMsIG5leHQpIHtcbiAgICAgIGlmIChjb25maWcudXNlclJvbGVzLmluZGV4T2YocmVxLnVzZXIucm9sZSkgPj1cbiAgICAgICAgICBjb25maWcudXNlclJvbGVzLmluZGV4T2Yocm9sZVJlcXVpcmVkKSkge1xuICAgICAgICBuZXh0KCk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICByZXMuc3RhdHVzKDQwMykuc2VuZCgnRm9yYmlkZGVuJyk7XG4gICAgICB9XG4gICAgfSk7XG59XG5cbi8qKlxuICogUmV0dXJucyBhIGp3dCB0b2tlbiBzaWduZWQgYnkgdGhlIGFwcCBzZWNyZXRcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHNpZ25Ub2tlbihpZCwgcm9sZSkge1xuICByZXR1cm4gand0LnNpZ24oeyBfaWQ6IGlkLCByb2xlOiByb2xlIH0sIGNvbmZpZy5zZWNyZXRzLnNlc3Npb24sIHtcbiAgICBleHBpcmVzSW46IDYwICogNjAgKiA1XG4gIH0pO1xufVxuXG4vKipcbiAqIFNldCB0b2tlbiBjb29raWUgZGlyZWN0bHkgZm9yIG9BdXRoIHN0cmF0ZWdpZXNcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHNldFRva2VuQ29va2llKHJlcSwgcmVzKSB7XG4gIGlmICghcmVxLnVzZXIpIHtcbiAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDQpLnNlbmQoJ0l0IGxvb2tzIGxpa2UgeW91IGFyZW5cXCd0IGxvZ2dlZCBpbiwgcGxlYXNlIHRyeSBhZ2Fpbi4nKTtcbiAgfVxuICB2YXIgdG9rZW4gPSBzaWduVG9rZW4ocmVxLnVzZXIuX2lkLCByZXEudXNlci5yb2xlKTtcbiAgcmVzLmNvb2tpZSgndG9rZW4nLCB0b2tlbik7XG4gIHJlcy5yZWRpcmVjdCgnLycpO1xufVxuIl19</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jan 14 2016 23:19:27 GMT-0600 (Central America Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
