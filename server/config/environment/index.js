@@ -44,7 +44,9 @@ var all = {
 
 // Export the config object based on the NODE_ENV
 // ==============================================
+var processRequire =
+  process.env.NODE_ENV !== undefined ? require('./' + process.env.NODE_ENV + '.js') : {};
 module.exports = _.merge(
   all,
   require('./shared'),
-  require('./' + process.env.NODE_ENV + '.js') || {});
+  processRequire);
