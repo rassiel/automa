@@ -1,5 +1,6 @@
 {
-  "name": "automa",
+  "name": "automa234",
+  "property": "test",
   "version": "0.0.0",
   "main": "server/app.js",
   "dependencies": {
